@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+@theme {
+    /* Colors */
+    --color-background: #ffffff;
+    --color-card: #f9fafb;
+    --color-primary: #6366f1;
+    --color-income: #10b981;
+    --color-expense: #ef4444;
+    /* Border Radius */
+    --radius-xl: 1rem;
+    /* Shadows */
+    --shadow-soft: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+@layer base {
+    body {
+        @apply bg-background text-gray-900 antialiased;
+    }
+}
