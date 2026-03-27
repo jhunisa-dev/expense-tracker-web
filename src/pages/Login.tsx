@@ -71,7 +71,7 @@ const Login: React.FC = () => {
                                 type="password"
                                 required
                                 className="block w-full pl-10 pr-3 py-2.5 border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors bg-white outline-none"
-                                placeholder="••••••••"
+                                placeholder="*******"
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
                             />

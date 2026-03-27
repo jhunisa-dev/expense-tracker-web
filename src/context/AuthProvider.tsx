@@ -18,8 +18,8 @@ export const AuthProvider = ({ children }: Props) => {
             const token = localStorage.getItem('token');
             if (token) {
                 try {
-                    const username = await authService.getMe();
-                    setUser(username);
+                    const me = await authService.getMe();
+                    setUser(me.name);
                 } catch (error) {
                     console.error("Token invalid or expired", error);
                     localStorage.removeItem('token');
@@ -35,8 +35,8 @@ export const AuthProvider = ({ children }: Props) => {
         const token = await authService.login(data);
         localStorage.setItem('token', token);
 
-        const username = await authService.getMe();
-        setUser(username);
+        const me = await authService.getMe();
+        setUser(me.name);
     };
 
     const logout = () => {
