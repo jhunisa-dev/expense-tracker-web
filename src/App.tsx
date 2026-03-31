@@ -10,6 +10,7 @@ import Register from './pages/Register';
 // Protected Pages
 import Dashboard from './pages/Dashboard';
 import Transactions from './pages/Transactions'; 
+import Categories from './pages/Categories'; 
 
 const App: React.FC = () => {
     return (
@@ -22,9 +23,9 @@ const App: React.FC = () => {
                     <Route element={<ProtectedRoute />}>
                         <Route path="/dashboard" element={<Dashboard />} />
                         <Route path="/transactions" element={<Transactions />} />
+                        <Route path="/categories" element={<Categories />} />
                         {/* 
               Future pages go here
-              <Route path="/categories"   element={<Categories />} />
               <Route path="/profile"      element={<Profile />} />
             */}
                     </Route>
